@@ -192,5 +192,49 @@ int main() {
     cout <<"Array at 0,0 is " << array[0][0] <<endl;
     cout << array[1][2]; //we didn't initialize this array elements, so it will give us garbage value as output.
 
+
+    //--------------------String-----------------
+
+    string name = "Sanskar";
+    int nameLength = name.size();
+    cout << name[0]<<endl;
+    cout << name[nameLength - 1]<<endl;
+
+    name[nameLength - 1] = 'R';
+
+    cout << name << endl;
+
+
+
+    //---------------FOR LOOP-------------
+
+    for (int i = 1; i <= 10;i++){
+        cout << "Sanskar" << i <<endl;
+    }
+
+    for (int i = 10; i >= 1; i--){
+        cout << "Sanskar" << i <<endl;
+    }
+
+    for (int i = 1; i <= 10;i++){
+        cout << "2*" << i << "=" << 2 * i <<endl;
+    }
+
+
+    //---------------WHILE LOOP--------------
+    int i = 1;
+    while(i<=10){
+        cout << "Sanskar" << i << endl;
+        i++;
+    }
+
+    //---------DO WHILE LOOP-----------
+    int i = 1;
+    do
+    { // IT runs at least onece even if the condition doesn't meet
+        cout << "Sanskar" << i <<endl;
+        i++;
+    } while (i <= 10);
+
     return 0;
 }
