@@ -1,6 +1,27 @@
 #include<bits/stdc++.h>  // It includes all the libraries in C++
 using namespace std;
 
+void printName() {
+        cout << "My name is SDGLKSDGKSDJG" << endl;
+    }
+
+void parameterizedVoidFunc(string name){
+        cout << "Name is " << name <<endl;
+}
+
+int addition(int x, int y){
+    int sum = x + y;
+    return sum;
+}
+
+
+//-------PASS BY REFERENCE EXAMPLE--------
+int referenceExample(int &xy)
+{ // We dont need to use & or anything in case or array as array is always passed by reference :)
+    xy = xy + 5;
+    return xy;
+}
+
 int main() {
     
     //int, long
@@ -236,5 +257,35 @@ int main() {
         i++;
     } while (i <= 10);
 
-    return 0;
+
+    //-------------FUNCTION---------------
+    //void -> function which doesn't return anything
+
+        string name;
+        cout << "Enter your name: ";
+        cin >> name;
+
+        parameterizedVoidFunc(name);
+
+        printName();
+
+       int x, y;
+        
+       cout << "Enter value of x and y: ";
+       cin >> x >> y;
+
+       cout << addition(x, y);
+
+
+    //  ---------PASS BY REFERENCE EXAMPLE----------
+        int xy;
+
+        cout << "Enter value of xy: ";
+        cin >> xy;
+        cout << xy <<endl;
+        referenceExample(xy);
+        cout << referenceExample(xy)<<endl;
+        cout << xy;
+
+        return 0;
 }
